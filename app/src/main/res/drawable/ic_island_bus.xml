@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 公交岛图标：与 ic_island_subway 同尺寸、同底色，保证两种线路在岛上视觉一致 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 底色 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <!-- 车身 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,24h52a10,10 0 0 1 10,10v28a10,10 0 0 1 -10,10h-52a10,10 0 0 1 -10,-10v-28a10,10 0 0 1 10,-10z" />
+
+    <!-- 前挡风 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M26,32h56v14h-56z" />
+
+    <!-- 侧窗与车门 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M26,52h14v14h-14zM56,52h26v14h-26z" />
+
+    <!-- 车轮 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,82a9,9 0 1 0 0,18a9,9 0 0 0 0,-18zM70,82a9,9 0 1 0 0,18a9,9 0 0 0 0,-18z" />
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LSPosed 管理器读取的默认作用域；安装后仍需在管理器里手动勾选 -->
+    <string-array name="xposed_scope">
+        <item>com.android.systemui</item>
+        <item>com.baidu.BaiduMap</item>
+        <item>com.autonavi.minimap</item>
+        <item>com.tencent.map</item>
+    </string-array>
+</resources>

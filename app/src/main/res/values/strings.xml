@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">地铁岛</string>
+    <string name="module_description">把百度 / 高德 / 腾讯地图的地铁导航信息投射到澎湃 HyperOS 超级岛（基于官方 miui.focus.param 协议）</string>
+</resources>

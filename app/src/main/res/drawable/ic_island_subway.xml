@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 底色 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <!-- 车厢 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,22h44a10,10 0 0 1 10,10v34a10,10 0 0 1 -10,10h-44a10,10 0 0 1 -10,-10v-34a10,10 0 0 1 10,-10z" />
+
+    <!-- 车窗 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M32,30h20v16h-20z" />
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M56,30h20v16h-20z" />
+
+    <!-- 线路色带 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M26,52h56v6h-56z" />
+
+    <!-- 车灯 -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M34,62h10v8h-10z" />
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M64,62h10v8h-10z" />
+
+    <!-- 轨道 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,82h8v14h-8z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,82h8v14h-8z" />
+</vector>

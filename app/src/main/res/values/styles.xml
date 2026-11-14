@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      去掉系统 ActionBar：界面标题由 Compose 自己画，
+      否则会出现「ActionBar 的地铁岛 + 大标题的地铁岛」两层标题。
+    -->
+    <style name="Theme.SubwayIsland" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

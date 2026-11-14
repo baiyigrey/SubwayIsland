@@ -1,0 +1,19 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.keystore
+
+# 构建产物与签名文件
+dist/
+app/docs/
+*.jks
+
+# Kotlin 编译守护进程日志
+.kotlin/

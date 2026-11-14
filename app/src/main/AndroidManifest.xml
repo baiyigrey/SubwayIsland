@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 自测出岛要发一条本地通知（Android 13+ 需要运行时授权） -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!--
+      包可见性（Android 11+ / targetSdk 30+ 必须声明）：
+      0.1.1 漏了这一段，Diagnostics 里的 getPackageInfo 会直接抛
+      NameNotFoundException，把「已安装」误报成「未安装」。
+      反馈里那两行「百度地图: 未安装 / 高德地图: 未安装」至少有可能是这个原因。
+    -->
+    <queries>
+        <package android:name="com.android.systemui" />
+        <package android:name="com.baidu.BaiduMap" />
+        <package android:name="com.autonavi.minimap" />
+        <package android:name="com.tencent.map" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_island_subway"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SubwayIsland">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.LogActivity"
+            android:exported="false"
+            android:label="日志" />
+
+        <!-- SystemUI 进程回报运行状态；只做诊断展示，不含任何敏感数据 -->
+        <receiver
+            android:name=".core.StatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.subwayisland.STATUS" />
+            </intent-filter>
+        </receiver>
+
+        <!-- LSPosed / Xposed 模块声明 -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/module_description" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
+    </application>
+
+</manifest>

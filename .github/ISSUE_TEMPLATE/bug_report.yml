@@ -1,0 +1,57 @@
+name: 问题反馈
+description: 岛没出现 / 内容不对 / 崩溃
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先跑一遍 **自测出岛**，再按下面填。缺「运行状态」和日志的 issue 很难定位。
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      description: 机型 + HyperOS 版本 + Android API（应用内「环境」卡片里都有）
+      placeholder: Xiaomi 2304FPN6DC / HyperOS 4 / API 37
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 模块版本
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: LSPosed 作用域
+      description: 勾了哪些包？总开关是否打开？
+      placeholder: com.android.systemui + com.autonavi.minimap
+    validations:
+      required: true
+  - type: dropdown
+    id: selftest
+    attributes:
+      label: 自测出岛的结果
+      options:
+        - 岛出现了
+        - 没出现，状态显示「注入点命中」
+        - 没出现，状态显示「注入点未命中」
+        - 没出现，状态显示「尚未收到回报」
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: 运行状态卡片内容
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 反馈文本
+      description: 日志页 →「复制反馈」→ 整段粘贴
+      render: text
+    validations:
+      required: true
